@@ -184,11 +184,11 @@ def main():
     user_query = "Tìm cho tôi chuyến bay từ HAN đi SGN dưới 2 triệu, rồi cho biết thời tiết SGN nên mặc gì?"
     
     print("=== RUNNING CHATBOT BASELINE ===")
-    chatbot = ChatbotBaseline(api_key='REDACTED_GROQ_KEY')
+    chatbot = ChatbotBaseline(api_key='')
     print(chatbot.query(user_query))
     
     print("\n=== RUNNING REACT AGENT ===")
-    agent = ReActAgent(api_key='REDACTED_GROQ_KEY',max_iterations=5)
+    agent = ReActAgent(api_key='',max_iterations=5)
     result = agent.run(user_query)
     print("Result:", result)
     print("Trace Log:", json.dumps(agent.trace, indent=2, ensure_ascii=False))
